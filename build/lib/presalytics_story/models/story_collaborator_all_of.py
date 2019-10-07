@@ -34,7 +34,7 @@ class StoryCollaboratorAllOf(object):
         'email': 'str',
         'name': 'str',
         'permission_type': 'PermissionType',
-        'permission_type_id': 'int',
+        'permission_type_id': 'str',
         'story_id': 'str',
         'user_id': 'str'
     }
@@ -141,7 +141,7 @@ class StoryCollaboratorAllOf(object):
 
 
         :return: The permission_type_id of this StoryCollaboratorAllOf.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._permission_type_id
 
@@ -151,7 +151,7 @@ class StoryCollaboratorAllOf(object):
 
 
         :param permission_type_id: The permission_type_id of this StoryCollaboratorAllOf.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._permission_type_id = permission_type_id
