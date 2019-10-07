@@ -13,7 +13,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "presalytics_story"
-VERSION = "0.1.6"
+VERSION = "0.1.7"
 
 # To install the library, run the following
 #
