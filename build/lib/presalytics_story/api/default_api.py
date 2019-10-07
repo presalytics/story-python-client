@@ -1282,16 +1282,16 @@ class DefaultApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def story_post(self, inline_object, **kwargs):  # noqa: E501
+    def story_post(self, unknown_base_type, **kwargs):  # noqa: E501
         """Upload new story to presalytics api  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.story_post(inline_object, async_req=True)
+        >>> thread = api.story_post(unknown_base_type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param InlineObject inline_object: (required)
+        :param UNKNOWN_BASE_TYPE unknown_base_type: A story outline json object (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1304,18 +1304,18 @@ class DefaultApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.story_post_with_http_info(inline_object, **kwargs)  # noqa: E501
+        return self.story_post_with_http_info(unknown_base_type, **kwargs)  # noqa: E501
 
-    def story_post_with_http_info(self, inline_object, **kwargs):  # noqa: E501
+    def story_post_with_http_info(self, unknown_base_type, **kwargs):  # noqa: E501
         """Upload new story to presalytics api  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.story_post_with_http_info(inline_object, async_req=True)
+        >>> thread = api.story_post_with_http_info(unknown_base_type, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param InlineObject inline_object: (required)
+        :param UNKNOWN_BASE_TYPE unknown_base_type: A story outline json object (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1332,7 +1332,7 @@ class DefaultApi(object):
 
         local_var_params = locals()
 
-        all_params = ['inline_object']  # noqa: E501
+        all_params = ['unknown_base_type']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1346,10 +1346,10 @@ class DefaultApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'inline_object' is set
-        if ('inline_object' not in local_var_params or
-                local_var_params['inline_object'] is None):
-            raise ApiValueError("Missing the required parameter `inline_object` when calling `story_post`")  # noqa: E501
+        # verify the required parameter 'unknown_base_type' is set
+        if ('unknown_base_type' not in local_var_params or
+                local_var_params['unknown_base_type'] is None):
+            raise ApiValueError("Missing the required parameter `unknown_base_type` when calling `story_post`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1363,8 +1363,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'inline_object' in local_var_params:
-            body_params = local_var_params['inline_object']
+        if 'unknown_base_type' in local_var_params:
+            body_params = local_var_params['unknown_base_type']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
