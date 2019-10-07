@@ -15,6 +15,7 @@ from __future__ import absolute_import
 
 # import models into model package
 from presalytics_story.models.base_model import BaseModel
+from presalytics_story.models.outline import Outline
 from presalytics_story.models.permission_type import PermissionType
 from presalytics_story.models.permission_type_all_of import PermissionTypeAllOf
 from presalytics_story.models.problem_detail import ProblemDetail
