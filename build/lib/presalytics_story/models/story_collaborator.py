@@ -38,7 +38,7 @@ class StoryCollaborator(object):
         'updated_by': 'str',
         'email': 'str',
         'name': 'str',
-        'permission_type': 'file',
+        'permission_type': 'PermissionType',
         'permission_type_id': 'int',
         'story_id': 'str',
         'user_id': 'str'
@@ -250,7 +250,7 @@ class StoryCollaborator(object):
 
 
         :return: The permission_type of this StoryCollaborator.  # noqa: E501
-        :rtype: file
+        :rtype: PermissionType
         """
         return self._permission_type
 
@@ -260,7 +260,7 @@ class StoryCollaborator(object):
 
 
         :param permission_type: The permission_type of this StoryCollaborator.  # noqa: E501
-        :type: file
+        :type: PermissionType
         """
 
         self._permission_type = permission_type

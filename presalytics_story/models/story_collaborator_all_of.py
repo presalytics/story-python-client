@@ -33,7 +33,7 @@ class StoryCollaboratorAllOf(object):
     openapi_types = {
         'email': 'str',
         'name': 'str',
-        'permission_type': 'file',
+        'permission_type': 'PermissionType',
         'permission_type_id': 'int',
         'story_id': 'str',
         'user_id': 'str'
@@ -120,7 +120,7 @@ class StoryCollaboratorAllOf(object):
 
 
         :return: The permission_type of this StoryCollaboratorAllOf.  # noqa: E501
-        :rtype: file
+        :rtype: PermissionType
         """
         return self._permission_type
 
@@ -130,7 +130,7 @@ class StoryCollaboratorAllOf(object):
 
 
         :param permission_type: The permission_type of this StoryCollaboratorAllOf.  # noqa: E501
-        :type: file
+        :type: PermissionType
         """
 
         self._permission_type = permission_type

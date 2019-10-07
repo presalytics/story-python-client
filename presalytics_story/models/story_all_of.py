@@ -32,8 +32,8 @@ class StoryAllOf(object):
     """
     openapi_types = {
         'ooxml_automation_id': 'str',
-        'outline': 'file',
-        'outline_history': 'file',
+        'outline': 'str',
+        'outline_history': 'StoryOutlineHistory',
         'revision': 'int',
         'title': 'str'
     }
@@ -94,7 +94,7 @@ class StoryAllOf(object):
 
 
         :return: The outline of this StoryAllOf.  # noqa: E501
-        :rtype: file
+        :rtype: str
         """
         return self._outline
 
@@ -104,7 +104,7 @@ class StoryAllOf(object):
 
 
         :param outline: The outline of this StoryAllOf.  # noqa: E501
-        :type: file
+        :type: str
         """
 
         self._outline = outline
@@ -115,7 +115,7 @@ class StoryAllOf(object):
 
 
         :return: The outline_history of this StoryAllOf.  # noqa: E501
-        :rtype: file
+        :rtype: StoryOutlineHistory
         """
         return self._outline_history
 
@@ -125,7 +125,7 @@ class StoryAllOf(object):
 
 
         :param outline_history: The outline_history of this StoryAllOf.  # noqa: E501
-        :type: file
+        :type: StoryOutlineHistory
         """
 
         self._outline_history = outline_history

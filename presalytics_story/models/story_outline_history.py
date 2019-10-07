@@ -37,7 +37,7 @@ class StoryOutlineHistory(object):
         'updated_at': 'datetime',
         'updated_by': 'str',
         'collaborator_user_id': 'str',
-        'outline': 'file',
+        'outline': 'str',
         'revision_number': 'int',
         'story_id': 'str'
     }
@@ -219,7 +219,7 @@ class StoryOutlineHistory(object):
 
 
         :return: The outline of this StoryOutlineHistory.  # noqa: E501
-        :rtype: file
+        :rtype: str
         """
         return self._outline
 
@@ -229,7 +229,7 @@ class StoryOutlineHistory(object):
 
 
         :param outline: The outline of this StoryOutlineHistory.  # noqa: E501
-        :type: file
+        :type: str
         """
 
         self._outline = outline

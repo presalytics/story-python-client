@@ -37,8 +37,8 @@ class Story(object):
         'updated_at': 'datetime',
         'updated_by': 'str',
         'ooxml_automation_id': 'str',
-        'outline': 'file',
-        'outline_history': 'file',
+        'outline': 'str',
+        'outline_history': 'StoryOutlineHistory',
         'revision': 'int',
         'title': 'str'
     }
@@ -224,7 +224,7 @@ class Story(object):
 
 
         :return: The outline of this Story.  # noqa: E501
-        :rtype: file
+        :rtype: str
         """
         return self._outline
 
@@ -234,7 +234,7 @@ class Story(object):
 
 
         :param outline: The outline of this Story.  # noqa: E501
-        :type: file
+        :type: str
         """
 
         self._outline = outline
@@ -245,7 +245,7 @@ class Story(object):
 
 
         :return: The outline_history of this Story.  # noqa: E501
-        :rtype: file
+        :rtype: StoryOutlineHistory
         """
         return self._outline_history
 
@@ -255,7 +255,7 @@ class Story(object):
 
 
         :param outline_history: The outline_history of this Story.  # noqa: E501
-        :type: file
+        :type: StoryOutlineHistory
         """
 
         self._outline_history = outline_history

@@ -32,7 +32,7 @@ class StoryOutlineHistoryAllOf(object):
     """
     openapi_types = {
         'collaborator_user_id': 'str',
-        'outline': 'file',
+        'outline': 'str',
         'revision_number': 'int',
         'story_id': 'str'
     }
@@ -89,7 +89,7 @@ class StoryOutlineHistoryAllOf(object):
 
 
         :return: The outline of this StoryOutlineHistoryAllOf.  # noqa: E501
-        :rtype: file
+        :rtype: str
         """
         return self._outline
 
@@ -99,7 +99,7 @@ class StoryOutlineHistoryAllOf(object):
 
 
         :param outline: The outline of this StoryOutlineHistoryAllOf.  # noqa: E501
-        :type: file
+        :type: str
         """
 
         self._outline = outline
