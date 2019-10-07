@@ -36,9 +36,10 @@ class Story(object):
         'id': 'str',
         'updated_at': 'datetime',
         'updated_by': 'str',
+        'collaboratrs': 'list[StoryCollaborator]',
         'ooxml_automation_id': 'str',
         'outline': 'str',
-        'outline_history': 'StoryOutlineHistory',
+        'outline_history': 'list[StoryOutlineHistory]',
         'revision': 'int',
         'title': 'str'
     }
@@ -49,6 +50,7 @@ class Story(object):
         'id': 'id',
         'updated_at': 'updated_at',
         'updated_by': 'updated_by',
+        'collaboratrs': 'collaboratrs',
         'ooxml_automation_id': 'ooxml_automation_id',
         'outline': 'outline',
         'outline_history': 'outline_history',
@@ -56,7 +58,7 @@ class Story(object):
         'title': 'title'
     }
 
-    def __init__(self, created_at=None, created_by=None, id=None, updated_at=None, updated_by=None, ooxml_automation_id=None, outline=None, outline_history=None, revision=None, title=None):  # noqa: E501
+    def __init__(self, created_at=None, created_by=None, id=None, updated_at=None, updated_by=None, collaboratrs=None, ooxml_automation_id=None, outline=None, outline_history=None, revision=None, title=None):  # noqa: E501
         """Story - a model defined in OpenAPI"""  # noqa: E501
 
         self._created_at = None
@@ -64,6 +66,7 @@ class Story(object):
         self._id = None
         self._updated_at = None
         self._updated_by = None
+        self._collaboratrs = None
         self._ooxml_automation_id = None
         self._outline = None
         self._outline_history = None
@@ -81,6 +84,8 @@ class Story(object):
             self.updated_at = updated_at
         if updated_by is not None:
             self.updated_by = updated_by
+        if collaboratrs is not None:
+            self.collaboratrs = collaboratrs
         if ooxml_automation_id is not None:
             self.ooxml_automation_id = ooxml_automation_id
         if outline is not None:
@@ -198,6 +203,27 @@ class Story(object):
         self._updated_by = updated_by
 
     @property
+    def collaboratrs(self):
+        """Gets the collaboratrs of this Story.  # noqa: E501
+
+
+        :return: The collaboratrs of this Story.  # noqa: E501
+        :rtype: list[StoryCollaborator]
+        """
+        return self._collaboratrs
+
+    @collaboratrs.setter
+    def collaboratrs(self, collaboratrs):
+        """Sets the collaboratrs of this Story.
+
+
+        :param collaboratrs: The collaboratrs of this Story.  # noqa: E501
+        :type: list[StoryCollaborator]
+        """
+
+        self._collaboratrs = collaboratrs
+
+    @property
     def ooxml_automation_id(self):
         """Gets the ooxml_automation_id of this Story.  # noqa: E501
 
@@ -245,7 +271,7 @@ class Story(object):
 
 
         :return: The outline_history of this Story.  # noqa: E501
-        :rtype: StoryOutlineHistory
+        :rtype: list[StoryOutlineHistory]
         """
         return self._outline_history
 
@@ -255,7 +281,7 @@ class Story(object):
 
 
         :param outline_history: The outline_history of this Story.  # noqa: E501
-        :type: StoryOutlineHistory
+        :type: list[StoryOutlineHistory]
         """
 
         self._outline_history = outline_history

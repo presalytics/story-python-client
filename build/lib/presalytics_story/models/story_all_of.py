@@ -31,14 +31,16 @@ class StoryAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'collaboratrs': 'list[StoryCollaborator]',
         'ooxml_automation_id': 'str',
         'outline': 'str',
-        'outline_history': 'StoryOutlineHistory',
+        'outline_history': 'list[StoryOutlineHistory]',
         'revision': 'int',
         'title': 'str'
     }
 
     attribute_map = {
+        'collaboratrs': 'collaboratrs',
         'ooxml_automation_id': 'ooxml_automation_id',
         'outline': 'outline',
         'outline_history': 'outline_history',
@@ -46,9 +48,10 @@ class StoryAllOf(object):
         'title': 'title'
     }
 
-    def __init__(self, ooxml_automation_id=None, outline=None, outline_history=None, revision=None, title=None):  # noqa: E501
+    def __init__(self, collaboratrs=None, ooxml_automation_id=None, outline=None, outline_history=None, revision=None, title=None):  # noqa: E501
         """StoryAllOf - a model defined in OpenAPI"""  # noqa: E501
 
+        self._collaboratrs = None
         self._ooxml_automation_id = None
         self._outline = None
         self._outline_history = None
@@ -56,6 +59,8 @@ class StoryAllOf(object):
         self._title = None
         self.discriminator = None
 
+        if collaboratrs is not None:
+            self.collaboratrs = collaboratrs
         if ooxml_automation_id is not None:
             self.ooxml_automation_id = ooxml_automation_id
         if outline is not None:
@@ -66,6 +71,27 @@ class StoryAllOf(object):
             self.revision = revision
         if title is not None:
             self.title = title
+
+    @property
+    def collaboratrs(self):
+        """Gets the collaboratrs of this StoryAllOf.  # noqa: E501
+
+
+        :return: The collaboratrs of this StoryAllOf.  # noqa: E501
+        :rtype: list[StoryCollaborator]
+        """
+        return self._collaboratrs
+
+    @collaboratrs.setter
+    def collaboratrs(self, collaboratrs):
+        """Sets the collaboratrs of this StoryAllOf.
+
+
+        :param collaboratrs: The collaboratrs of this StoryAllOf.  # noqa: E501
+        :type: list[StoryCollaborator]
+        """
+
+        self._collaboratrs = collaboratrs
 
     @property
     def ooxml_automation_id(self):
@@ -115,7 +141,7 @@ class StoryAllOf(object):
 
 
         :return: The outline_history of this StoryAllOf.  # noqa: E501
-        :rtype: StoryOutlineHistory
+        :rtype: list[StoryOutlineHistory]
         """
         return self._outline_history
 
@@ -125,7 +151,7 @@ class StoryAllOf(object):
 
 
         :param outline_history: The outline_history of this StoryAllOf.  # noqa: E501
-        :type: StoryOutlineHistory
+        :type: list[StoryOutlineHistory]
         """
 
         self._outline_history = outline_history
