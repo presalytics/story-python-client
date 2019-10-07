@@ -14,7 +14,14 @@
 from __future__ import absolute_import
 
 # import models into model package
+from presalytics_story.models.base_model import BaseModel
 from presalytics_story.models.inline_object import InlineObject
+from presalytics_story.models.permission_type import PermissionType
+from presalytics_story.models.permission_type_all_of import PermissionTypeAllOf
 from presalytics_story.models.problem_detail import ProblemDetail
 from presalytics_story.models.story import Story
+from presalytics_story.models.story_all_of import StoryAllOf
 from presalytics_story.models.story_collaborator import StoryCollaborator
+from presalytics_story.models.story_collaborator_all_of import StoryCollaboratorAllOf
+from presalytics_story.models.story_outline_history import StoryOutlineHistory
+from presalytics_story.models.story_outline_history_all_of import StoryOutlineHistoryAllOf

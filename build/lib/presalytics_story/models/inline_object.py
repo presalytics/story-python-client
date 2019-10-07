@@ -31,42 +31,42 @@ class InlineObject(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'file': 'list[file]'
+        'outline': 'object'
     }
 
     attribute_map = {
-        'file': 'file'
+        'outline': 'outline'
     }
 
-    def __init__(self, file=None):  # noqa: E501
+    def __init__(self, outline=None):  # noqa: E501
         """InlineObject - a model defined in OpenAPI"""  # noqa: E501
 
-        self._file = None
+        self._outline = None
         self.discriminator = None
 
-        if file is not None:
-            self.file = file
+        if outline is not None:
+            self.outline = outline
 
     @property
-    def file(self):
-        """Gets the file of this InlineObject.  # noqa: E501
+    def outline(self):
+        """Gets the outline of this InlineObject.  # noqa: E501
 
 
-        :return: The file of this InlineObject.  # noqa: E501
-        :rtype: list[file]
+        :return: The outline of this InlineObject.  # noqa: E501
+        :rtype: object
         """
-        return self._file
+        return self._outline
 
-    @file.setter
-    def file(self, file):
-        """Sets the file of this InlineObject.
+    @outline.setter
+    def outline(self, outline):
+        """Sets the outline of this InlineObject.
 
 
-        :param file: The file of this InlineObject.  # noqa: E501
-        :type: list[file]
+        :param outline: The outline of this InlineObject.  # noqa: E501
+        :type: object
         """
 
-        self._file = file
+        self._outline = outline
 
     def to_dict(self):
         """Returns the model properties as a dict"""
