@@ -475,7 +475,7 @@ class DefaultApi(object):
     def story_id_collaborators_userid_delete(self, id, story_collaborator_userid, **kwargs):  # noqa: E501
         """story_id_collaborators_userid_delete  # noqa: E501
 
-        Remove a collaborator's permissions  # noqa: E501
+        Remove a collaborator from this story  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.story_id_collaborators_userid_delete(id, story_collaborator_userid, async_req=True)
@@ -491,7 +491,7 @@ class DefaultApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: StoryCollaborator
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -501,7 +501,7 @@ class DefaultApi(object):
     def story_id_collaborators_userid_delete_with_http_info(self, id, story_collaborator_userid, **kwargs):  # noqa: E501
         """story_id_collaborators_userid_delete  # noqa: E501
 
-        Remove a collaborator's permissions  # noqa: E501
+        Remove a collaborator from this story  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.story_id_collaborators_userid_delete_with_http_info(id, story_collaborator_userid, async_req=True)
@@ -519,7 +519,7 @@ class DefaultApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(StoryCollaborator, status_code(int), headers(HTTPHeaderDict))
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -580,7 +580,7 @@ class DefaultApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='StoryCollaborator',  # noqa: E501
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -828,19 +828,19 @@ class DefaultApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def story_id_collaborators_userid_put(self, id, story_collaborator_userid, unknown_base_type, **kwargs):  # noqa: E501
+    def story_id_collaborators_userid_put(self, id, story_collaborator_userid, story_collaborator, **kwargs):  # noqa: E501
         """story_id_collaborators_userid_put  # noqa: E501
 
         Modify a collaborator's permissions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.story_id_collaborators_userid_put(id, story_collaborator_userid, unknown_base_type, async_req=True)
+        >>> thread = api.story_id_collaborators_userid_put(id, story_collaborator_userid, story_collaborator, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str id: the id from the story object (required)
         :param str story_collaborator_userid: The presalytics userid (NOT the Id of the story_collaborator object) (required)
-        :param UNKNOWN_BASE_TYPE unknown_base_type: Collaborator user id (presalytics userid) and permission type (required)
+        :param StoryCollaborator story_collaborator: Collaborator user id (presalytics userid) and permission type (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -853,21 +853,21 @@ class DefaultApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.story_id_collaborators_userid_put_with_http_info(id, story_collaborator_userid, unknown_base_type, **kwargs)  # noqa: E501
+        return self.story_id_collaborators_userid_put_with_http_info(id, story_collaborator_userid, story_collaborator, **kwargs)  # noqa: E501
 
-    def story_id_collaborators_userid_put_with_http_info(self, id, story_collaborator_userid, unknown_base_type, **kwargs):  # noqa: E501
+    def story_id_collaborators_userid_put_with_http_info(self, id, story_collaborator_userid, story_collaborator, **kwargs):  # noqa: E501
         """story_id_collaborators_userid_put  # noqa: E501
 
         Modify a collaborator's permissions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.story_id_collaborators_userid_put_with_http_info(id, story_collaborator_userid, unknown_base_type, async_req=True)
+        >>> thread = api.story_id_collaborators_userid_put_with_http_info(id, story_collaborator_userid, story_collaborator, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str id: the id from the story object (required)
         :param str story_collaborator_userid: The presalytics userid (NOT the Id of the story_collaborator object) (required)
-        :param UNKNOWN_BASE_TYPE unknown_base_type: Collaborator user id (presalytics userid) and permission type (required)
+        :param StoryCollaborator story_collaborator: Collaborator user id (presalytics userid) and permission type (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -884,7 +884,7 @@ class DefaultApi(object):
 
         local_var_params = locals()
 
-        all_params = ['id', 'story_collaborator_userid', 'unknown_base_type']  # noqa: E501
+        all_params = ['id', 'story_collaborator_userid', 'story_collaborator']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -906,10 +906,10 @@ class DefaultApi(object):
         if ('story_collaborator_userid' not in local_var_params or
                 local_var_params['story_collaborator_userid'] is None):
             raise ApiValueError("Missing the required parameter `story_collaborator_userid` when calling `story_id_collaborators_userid_put`")  # noqa: E501
-        # verify the required parameter 'unknown_base_type' is set
-        if ('unknown_base_type' not in local_var_params or
-                local_var_params['unknown_base_type'] is None):
-            raise ApiValueError("Missing the required parameter `unknown_base_type` when calling `story_id_collaborators_userid_put`")  # noqa: E501
+        # verify the required parameter 'story_collaborator' is set
+        if ('story_collaborator' not in local_var_params or
+                local_var_params['story_collaborator'] is None):
+            raise ApiValueError("Missing the required parameter `story_collaborator` when calling `story_id_collaborators_userid_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -927,8 +927,8 @@ class DefaultApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'unknown_base_type' in local_var_params:
-            body_params = local_var_params['unknown_base_type']
+        if 'story_collaborator' in local_var_params:
+            body_params = local_var_params['story_collaborator']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

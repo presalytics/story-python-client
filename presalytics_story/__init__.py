@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "0.1.15"
+__version__ = "0.1.16"
 
 # import apis into sdk package
 from presalytics_story.api.default_api import DefaultApi
