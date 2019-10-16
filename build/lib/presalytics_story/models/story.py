@@ -37,7 +37,7 @@ class Story(object):
         'updated_at': 'datetime',
         'updated_by': 'str',
         'collaborators': 'list[StoryCollaborator]',
-        'ooxml_automation_id': 'str',
+        'ooxml_documents': 'list[OoxmlDocument]',
         'outline': 'str',
         'outline_history': 'list[StoryOutlineHistory]',
         'revision': 'int',
@@ -51,14 +51,14 @@ class Story(object):
         'updated_at': 'updated_at',
         'updated_by': 'updated_by',
         'collaborators': 'collaborators',
-        'ooxml_automation_id': 'ooxml_automation_id',
+        'ooxml_documents': 'ooxml_documents',
         'outline': 'outline',
         'outline_history': 'outline_history',
         'revision': 'revision',
         'title': 'title'
     }
 
-    def __init__(self, created_at=None, created_by=None, id=None, updated_at=None, updated_by=None, collaborators=None, ooxml_automation_id=None, outline=None, outline_history=None, revision=None, title=None):  # noqa: E501
+    def __init__(self, created_at=None, created_by=None, id=None, updated_at=None, updated_by=None, collaborators=None, ooxml_documents=None, outline=None, outline_history=None, revision=None, title=None):  # noqa: E501
         """Story - a model defined in OpenAPI"""  # noqa: E501
 
         self._created_at = None
@@ -67,7 +67,7 @@ class Story(object):
         self._updated_at = None
         self._updated_by = None
         self._collaborators = None
-        self._ooxml_automation_id = None
+        self._ooxml_documents = None
         self._outline = None
         self._outline_history = None
         self._revision = None
@@ -86,8 +86,8 @@ class Story(object):
             self.updated_by = updated_by
         if collaborators is not None:
             self.collaborators = collaborators
-        if ooxml_automation_id is not None:
-            self.ooxml_automation_id = ooxml_automation_id
+        if ooxml_documents is not None:
+            self.ooxml_documents = ooxml_documents
         if outline is not None:
             self.outline = outline
         if outline_history is not None:
@@ -224,25 +224,25 @@ class Story(object):
         self._collaborators = collaborators
 
     @property
-    def ooxml_automation_id(self):
-        """Gets the ooxml_automation_id of this Story.  # noqa: E501
+    def ooxml_documents(self):
+        """Gets the ooxml_documents of this Story.  # noqa: E501
 
 
-        :return: The ooxml_automation_id of this Story.  # noqa: E501
-        :rtype: str
+        :return: The ooxml_documents of this Story.  # noqa: E501
+        :rtype: list[OoxmlDocument]
         """
-        return self._ooxml_automation_id
+        return self._ooxml_documents
 
-    @ooxml_automation_id.setter
-    def ooxml_automation_id(self, ooxml_automation_id):
-        """Sets the ooxml_automation_id of this Story.
+    @ooxml_documents.setter
+    def ooxml_documents(self, ooxml_documents):
+        """Sets the ooxml_documents of this Story.
 
 
-        :param ooxml_automation_id: The ooxml_automation_id of this Story.  # noqa: E501
-        :type: str
+        :param ooxml_documents: The ooxml_documents of this Story.  # noqa: E501
+        :type: list[OoxmlDocument]
         """
 
-        self._ooxml_automation_id = ooxml_automation_id
+        self._ooxml_documents = ooxml_documents
 
     @property
     def outline(self):

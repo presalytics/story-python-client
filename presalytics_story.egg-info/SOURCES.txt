@@ -14,6 +14,8 @@ presalytics_story/api/__init__.py
 presalytics_story/api/default_api.py
 presalytics_story/models/__init__.py
 presalytics_story/models/base_model.py
+presalytics_story/models/ooxml_document.py
+presalytics_story/models/ooxml_document_all_of.py
 presalytics_story/models/outline.py
 presalytics_story/models/permission_type.py
 presalytics_story/models/permission_type_all_of.py

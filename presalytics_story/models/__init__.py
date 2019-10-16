@@ -15,6 +15,8 @@ from __future__ import absolute_import
 
 # import models into model package
 from presalytics_story.models.base_model import BaseModel
+from presalytics_story.models.ooxml_document import OoxmlDocument
+from presalytics_story.models.ooxml_document_all_of import OoxmlDocumentAllOf
 from presalytics_story.models.outline import Outline
 from presalytics_story.models.permission_type import PermissionType
 from presalytics_story.models.permission_type_all_of import PermissionTypeAllOf

@@ -32,7 +32,7 @@ class StoryAllOf(object):
     """
     openapi_types = {
         'collaborators': 'list[StoryCollaborator]',
-        'ooxml_automation_id': 'str',
+        'ooxml_documents': 'list[OoxmlDocument]',
         'outline': 'str',
         'outline_history': 'list[StoryOutlineHistory]',
         'revision': 'int',
@@ -41,18 +41,18 @@ class StoryAllOf(object):
 
     attribute_map = {
         'collaborators': 'collaborators',
-        'ooxml_automation_id': 'ooxml_automation_id',
+        'ooxml_documents': 'ooxml_documents',
         'outline': 'outline',
         'outline_history': 'outline_history',
         'revision': 'revision',
         'title': 'title'
     }
 
-    def __init__(self, collaborators=None, ooxml_automation_id=None, outline=None, outline_history=None, revision=None, title=None):  # noqa: E501
+    def __init__(self, collaborators=None, ooxml_documents=None, outline=None, outline_history=None, revision=None, title=None):  # noqa: E501
         """StoryAllOf - a model defined in OpenAPI"""  # noqa: E501
 
         self._collaborators = None
-        self._ooxml_automation_id = None
+        self._ooxml_documents = None
         self._outline = None
         self._outline_history = None
         self._revision = None
@@ -61,8 +61,8 @@ class StoryAllOf(object):
 
         if collaborators is not None:
             self.collaborators = collaborators
-        if ooxml_automation_id is not None:
-            self.ooxml_automation_id = ooxml_automation_id
+        if ooxml_documents is not None:
+            self.ooxml_documents = ooxml_documents
         if outline is not None:
             self.outline = outline
         if outline_history is not None:
@@ -94,25 +94,25 @@ class StoryAllOf(object):
         self._collaborators = collaborators
 
     @property
-    def ooxml_automation_id(self):
-        """Gets the ooxml_automation_id of this StoryAllOf.  # noqa: E501
+    def ooxml_documents(self):
+        """Gets the ooxml_documents of this StoryAllOf.  # noqa: E501
 
 
-        :return: The ooxml_automation_id of this StoryAllOf.  # noqa: E501
-        :rtype: str
+        :return: The ooxml_documents of this StoryAllOf.  # noqa: E501
+        :rtype: list[OoxmlDocument]
         """
-        return self._ooxml_automation_id
+        return self._ooxml_documents
 
-    @ooxml_automation_id.setter
-    def ooxml_automation_id(self, ooxml_automation_id):
-        """Sets the ooxml_automation_id of this StoryAllOf.
+    @ooxml_documents.setter
+    def ooxml_documents(self, ooxml_documents):
+        """Sets the ooxml_documents of this StoryAllOf.
 
 
-        :param ooxml_automation_id: The ooxml_automation_id of this StoryAllOf.  # noqa: E501
-        :type: str
+        :param ooxml_documents: The ooxml_documents of this StoryAllOf.  # noqa: E501
+        :type: list[OoxmlDocument]
         """
 
-        self._ooxml_automation_id = ooxml_automation_id
+        self._ooxml_documents = ooxml_documents
 
     @property
     def outline(self):

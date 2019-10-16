@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "0.1.17"
+__version__ = "0.1.18"
 
 # import apis into sdk package
 from presalytics_story.api.default_api import DefaultApi
@@ -29,6 +29,8 @@ from presalytics_story.exceptions import ApiKeyError
 from presalytics_story.exceptions import ApiException
 # import models into sdk package
 from presalytics_story.models.base_model import BaseModel
+from presalytics_story.models.ooxml_document import OoxmlDocument
+from presalytics_story.models.ooxml_document_all_of import OoxmlDocumentAllOf
 from presalytics_story.models.outline import Outline
 from presalytics_story.models.permission_type import PermissionType
 from presalytics_story.models.permission_type_all_of import PermissionTypeAllOf
